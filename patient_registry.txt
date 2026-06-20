@@ -1,7 +1,0 @@
-Patient Name: Manoj, Age: 25, Disease: leg fracture
-Patient Name: gaurav, Age: 100, Disease: brain hemorrhage
-Patient Name: krishna, Age: 23, Disease: routine checkup of fracture
-Patient Name: krishna, Age: 23, Disease: routine checkup of fracture
-Patient Name: Manoj, Age: 20, Disease: fever
-Patient Name: harsh, Age: 9, Disease: kidney stone
-Patient Name: Siraj, Age: 31, Disease: backpain
