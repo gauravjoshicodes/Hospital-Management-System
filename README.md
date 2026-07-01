@@ -1,102 +1,191 @@
-# Hospital-Management-System
+# 🏥 Hospital Management System
 
-A simple Hospital Management System built using **Node.js**, **Express.js**, **HTML**, and **CSS**. The application allows hospital staff to register patients, store patient details, and view all registered patients in a structured table format.
+A full-stack Hospital Management System built using **Node.js**, **Express.js**, **MongoDB Atlas**, and **Mongoose**. The application enables hospital staff to register patients, securely store patient information in a cloud database, and view all registered patients through a clean and responsive web interface.
 
-## Features
+---
+
+## 📌 Project Overview
+
+This project replaces traditional file-based storage with **MongoDB Atlas**, allowing patient records to be stored securely in the cloud. The application follows a simple client-server architecture using Express.js for the backend and HTML/CSS for the frontend.
+
+---
+
+## ✨ Features
 
 * Register new patients
-* Store patient information in a text file
+* Store patient records in MongoDB Atlas
 * View all registered patients
-* Clean and responsive user interface
-* Table-based patient record display
-* Express.js backend server
-* File System (FS) based data storage
+* Responsive user interface
+* Form validation
+* Automatic timestamps using MongoDB
+* Environment variable support using dotenv
+* Simple and beginner-friendly project structure
 
-## Technologies Used
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+
+### Backend
 
 * Node.js
 * Express.js
-* HTML5
-* CSS3
-* JavaScript
-* File System Module (fs)
 
-## Project Structure
+### Database
+
+* MongoDB Atlas
+* Mongoose ODM
+
+### Other Packages
+
+* dotenv
+
+---
+
+## 📂 Project Structure
 
 ```text
 Hospital-Management-System/
 │
-├── app.js
-├── index.html
-├── patient.css
-├── patient_registry.txt
+├── app.js                 # Express server
+├── models/
+│   └── Patient.js         # Mongoose schema
+├── index.html             # Patient registration page
+├── patient.css            # Styling
+├── .env                   # Environment variables (Not pushed to GitHub)
+├── .gitignore
 ├── package.json
 ├── package-lock.json
 └── README.md
 ```
 
-## Installation
+---
 
-Clone the repository:
+## ⚙️ Installation
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/gauravjoshicodes/Hospital-Management-System.git
+git clone https://github.com/your-username/Hospital-Management-System.git
 ```
 
-Move into the project directory:
+### 2. Open the project
 
 ```bash
 cd Hospital-Management-System
 ```
 
-Install dependencies:
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the application:
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+PORT=3000
+MONGO_URI=your_mongodb_atlas_connection_string
+```
+
+Example:
+
+```env
+PORT=3000
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/HospitalManagement
+```
+
+> **Do not upload your `.env` file to GitHub.**
+
+---
+
+## ▶️ Run the Project
 
 ```bash
 node app.js
 ```
 
-## Usage
+Server starts at:
 
-1. Open your browser.
-2. Visit:
-
-```text
+```
 http://localhost:3000
 ```
 
-3. Register a patient by entering:
+---
+
+## 📝 Application Workflow
+
+1. Open the application.
+2. Fill in:
 
    * Patient Name
    * Age
-   * Disease / Medical Condition
+   * Mobile Number
+   * Registration Date & Time
+   * Disease
+3. Click **Register Patient**.
+4. Patient information is stored in MongoDB Atlas.
+5. Click **View Registered Patients** to see all records.
 
-4. Click **Register Patient**.
+---
 
-5. Click **View Registered Patients** to see all saved records.
+## 📡 Routes
 
-## Sample Record
+| Method | Route       | Description                  |
+| ------ | ----------- | ---------------------------- |
+| GET    | `/`         | Display registration form    |
+| POST   | `/register` | Register a new patient       |
+| GET    | `/patients` | View all registered patients |
 
-```text
-Patient Name: Manoj, Age: 25, Disease: Leg Fracture
-Patient Name: Gaurav, Age: 30, Disease: Brain Hemorrhage
-```
+---
 
-Patient records are stored locally in `patient_registry.txt`.
+## 💾 Database Schema
 
-## Future Enhancements
+Each patient record contains:
 
-* Edit patient records
-* Delete patient records
-* Search patients
-* MongoDB database integration
-* Authentication system
-* Appointment management
-* Doctor management
-* Dashboard analytics
+* Patient Name
+* Age
+* Mobile Number
+* Registration Date & Time
+* Disease
+* Created At
+* Updated At
 
+---
+
+## 📦 Dependencies
+
+* Express
+* Mongoose
+* dotenv
+
+---
+
+## 🔒 Security
+
+The project uses environment variables to protect sensitive information such as the MongoDB connection string.
+
+The `.env` file is excluded using `.gitignore`.
+
+---
+
+## 🚀 Future Improvements
+
+* Login & Authentication
+* Admin Dashboard
+* Search Patients
+* Update Patient Details
+* Delete Patient Records
+* Appointment Management
+* Doctor Management
+* Medical Reports Upload
+* Pagination
+* REST API Documentation
